@@ -6,7 +6,7 @@ Some of my favorite things to work with are databases, workflow automation, spre
 
 Also: sometimes I write blog posts, make digital art and learn about whatever's caught my interest. 
 
-<img src="techlist.svg" width="800" height="400">
+<img src="techlist.svg" width="800">
 
 ### My Comfort Zone
 Here's what I've been working with for 10+ years:
