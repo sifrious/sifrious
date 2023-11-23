@@ -1,0 +1,45 @@
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+
+      <style>
+        .tech_containers {
+          background-color: red;
+        }
+      </style>
+
+      <div id="tech_containers">
+        <div id="">
+          <div id="_header">
+            <div id="_title" class="tech_header_name">My Comfort Zone</div>
+            <div id="_desc" class="tech_header_desc">Here's what I've been working with for 10+ years</div>
+          </div>
+          <div id="tag_container">
+            <a href="" class="link_tag comfort_link_tag">python</a>
+            <a href="" class="link_tag comfort_link_tag">flask</a>
+            <a href="" class="link_tag comfort_link_tag">postgresql</a>
+            <a href="" class="link_tag comfort_link_tag">vanilla javascript</a>
+            <a href="" class="link_tag comfort_link_tag">css/html</a>
+            <a href="" class="link_tag comfort_link_tag">hosting on virtual machines</a>
+            <a href="" class="link_tag comfort_link_tag">mac os</a>
+            <a href="" class="link_tag comfort_link_tag">ubuntu linux</a>
+            <a href="" class="link_tag comfort_link_tag">adobe illustrator</a>
+            <a href="" class="link_tag comfort_link_tag">google sheets</a>
+            <a href="" class="link_tag comfort_link_tag">microsoft excel</a>
+          </div>
+        </div>
+      </div>
+
+      /* 
+        <div id="">
+          <div id="_header">
+            <div id="_title" class="tech_header_name"></div>
+            <div id="_desc" class="tech_header_desc"></div>
+          </div>
+          <div id="tag_container">
+          </div>
+        </div> */
+
+    </div>
+  </foreignObject>
+</svg>
