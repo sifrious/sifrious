@@ -1,6 +1,6 @@
-# Hello, everybody
+![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=hello%20everybody&fontAlign=40&fontAlignY=40&fontColor=ffffff&color=0:1f7a7a,4:008080,19:009999,65:3380cc,92:b53389,100:9d0759)
 
-So glad you took a moment to check out my github. My personal projects are available here. My personal website is under construction.
+I'm so glad you took a moment to check out my github. My personal projects are available here. My personal website is under construction.
 
 I've been writing code for over a decade. If I won the lottery tomorrow and could do anything in the world, I'd still be writing code. And making spreadsheets.
 
