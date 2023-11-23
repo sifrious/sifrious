@@ -4,20 +4,19 @@ I'm so glad you took a moment to check out my github profile. My personal projec
 
 Some of my favorite things to work with are databases, workflow automation, spreadsheets, and data scraping/cleaning. Most of my motivation is to understand data organization and present it in a simple and understandable way. I like MySQL, PostgreSQL, and sqlite. I love elegant solutions, savor minimalist and intuitive design, appreciate good documentation, notice details, prioritize pragmatic decisions and conversations and work well independently and on teams.
 
-Also: sometimes I write blog posts, make digital art and learn about whatever's caught my interest. 
-
-<img src="techlist.svg" width="800">
+Also: sometimes I write blog posts, make digital art and learn about whatever's caught my interest.
 
 ### My Comfort Zone
 Here's what I've been working with for 10+ years:
-- python, flask
-- postgresql
-- vanilla javascript
-- css/html
-- hosting on virtual machines
-- mac os and ubuntu linux
-- adobe squite design software
-- google sheets, microsoft excel
+python, flask
+postgresql
+vanilla javascript
+css/html
+hosting on virtual machines
+mac os and ubuntu linux
+adobe squite design software
+google sheets
+microsoft excel
 
 ### I'm Solid With
 What I've been doing for at least 5 years:
