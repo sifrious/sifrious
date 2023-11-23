@@ -4,11 +4,11 @@
 
       <style>
         .tech_containers {
-          background-color: red;
+          font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
         }
       </style>
 
-      <div id="tech_containers">
+      <div class="tech_containers">
         <div id="">
           <div id="_header">
             <div id="_title" class="tech_header_name">My Comfort Zone</div>
