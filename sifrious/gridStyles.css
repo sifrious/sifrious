@@ -1,0 +1,62 @@
+#grid-container {
+    display:grid;
+    width: 100%;
+}
+
+/* @media screen and (max-width:768px) {
+} */
+
+@media screen and (min-width:768px) {
+    #grid-container {
+        display: grid;
+        min-width: 100%;
+        min-height: 80em;
+        grid-template-columns: [first] 8% [marginRight] 40% [article] 8% [projectsCol] 22% [contactsCol] 22% [colsend];
+        grid-template-rows: [row1-start] 6em [row1-end] 80% [third-line] auto [last-line];
+    }
+
+    .item-col-left-main {
+        grid-column: first/projectsCol;
+        grid-row: row1-start/row1-end;
+    }
+
+    .left-main-item-select {
+        background-color: white;
+        background-image: linear-gradient(to right, #f5a3d3, #edd98b) !important;
+        font-weight: 400;
+    }
+
+    .item-col-projects {
+        grid-column: projectsCol/contactsCol;
+        grid-row: row1-start/row1-end;
+        width: 100%;
+    }
+
+    .button-projects-select {
+        background-color: white;
+        background-image: linear-gradient(to right, #edd98b,  #8dc6d8) !important;
+        font-weight: 400;
+    }
+
+    .item-col-contact {
+        grid-column: contactsCol/colsend;
+        grid-row: row1-start/row1-end;
+        width: 100%;
+    }
+
+    .button-contact-select {
+        background-color: white;
+        background-image: linear-gradient(to right, #8dc6d8, #f5a3d3) !important;
+        font-weight: 400;
+    }
+
+    .projects-list {
+        grid-column: projectsCol/colsEnd;
+        grid-row: row1-end/third-line;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}

@@ -21,5 +21,3 @@ Tech I've used betwen six months to two years: `k8s w/ aws and google`, `message
 ### I'm Excited About
 
 When we chat, let's talk about learning: `go`, `network automation`, `laravel livewire`, `pest/TDD`, `SVG animation`, `accessability`
-
-<small>I updated this README with the help of [this uxdesign post](https://bootcamp.uxdesign.cc/how-to-design-an-attractive-github-profile-readme-3618d6c53783) and I'm also relying on [this freecodecamp article](https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/) to update a portfolio website in this repo.</small>

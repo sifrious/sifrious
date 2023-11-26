@@ -1,0 +1,182 @@
+header {
+    width: 100%;
+    min-height: 2em;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2.3px solid black;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-item.no-gradient {
+    background-image: none !important;
+}
+
+.detail {
+    font-family: 'Courier Prime';
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.card-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 0;
+}
+
+.card-detail {
+    padding-left: 8px;
+    position: relative;
+}
+
+.button {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.4em;
+    font-weight: 300;
+    position: relative;
+}
+
+.button-wrap {
+    padding: 2px 17px; /* Provide internal space around the content */
+    margin: 0px 3px;
+    border: 2px solid transparent;
+}
+
+.button-wrap:hover {
+    background-color: #edd98b;
+    text-align: center; /* Align the text to the center */
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the div */
+    transition: background-color 0.3s ease; /* Add a transition effect when hovering over the div */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Add a shadow effect */
+}
+
+.full-row-item {
+    border-bottom: 1.8px solid black;
+}
+
+#subtitle {
+    font-weight: 100;
+    font-style: italic;
+    font-size: .8em;
+}
+
+html {
+    width: 102%;
+    margin: -10px;
+    height: 100%;
+    margin: -10px;
+    position: absolute;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-image: radial-gradient(#2c9797, #c8e7e7);
+}
+
+/*  */
+
+.projects-item {
+    border-left: 1.8px solid black;
+    border-bottom: 1.8px solid black;
+    width: 100%;
+}
+
+.projects-title-container {
+    
+    padding-left: 18px;
+    height: 4em;
+    position: relative;
+}
+
+.projects-title-div {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.projects-pre {
+    font-size: 1.2em;
+    font-weight: 100;
+    padding-right: 15px;
+}
+
+.projects-name {
+    font-family: 'Courier Prime';
+    font-size: 1.4em;
+}
+
+@media screen and (max-width:768px) {
+
+    header {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* #button-title {
+        min-width: 400px;
+        width: 100%;
+    }
+
+    #button-group {
+        width: 100% !important;
+    }
+
+    #button-group {
+        border-top: 2px solid black;
+    }
+
+    .button {
+        margin-top: 0px;
+        width: 100%;
+    } */
+}
+
+@media screen and (max-width:480px) {
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 769px) {
+    /* CSS rules for screens that are between 769px and 1024px wide */
+    .item-col-left-main {
+        padding-left: 10%;
+    }
+
+    .detail {
+        padding-left: 12%;
+    }
+
+    .rowdiv {
+        border-left: 1.8px solid black !important;
+    }
+
+    #button-group {
+        width: 44% !important;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+/* CSS rules for screens that are between 769px and 1024px wide */
+}
+
+@media screen and (min-width: 1025px) {
+/* CSS rules for screens that are greater than 1025px wide */
+}
