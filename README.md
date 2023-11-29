@@ -8,7 +8,7 @@ Also: sometimes I write blog posts, make digital art and learn about whatever's 
 
 ### My Comfort Zone
 
-Here's what I've been working with for 10+ years: `python`, `postgresql`, `vanilla javascript`, `css`, `html`, `hosting on virtual machines`, `mac os and ubuntu linux`, `adobe squite design software`, `google sheets`, `microsoft excel`
+Here's what I've been working with for 10+ years: `python`, `postgresql`, `vanilla javascript`, `css`, `html`, `hosting on virtual machines`, `mac os and ubuntu linux`, `adobe suite design software`, `google sheets`, `microsoft excel`
 
 ### I'm Solid With
 
