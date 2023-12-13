@@ -125,6 +125,51 @@ header {
 }
 
 /* 
+| LANDING DISPLAY RULES
+|
++-------------------------------------------------------*/
+.fullscreen {
+    padding: 20px;
+    max-width: 100%;
+    font-size: 4em;
+}
+
+.portfolio-small {
+    display: block;
+    font-size: .7em;
+    line-height: 1.1em !important;
+    padding: 1.6% 0 0 0;
+}
+
+#landing-detail {
+    display: block;
+    width: 70%;
+    font-size: .5em;
+    margin: 0 auto 0 14% ;
+    padding: 0%;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal;
+}
+
+#landingButton {
+    line-height: .7em;
+    font-weight: 600;
+    width: auto;
+    font-size: 2em;
+    padding: 14% 0 0 0;
+    margin: 8% 2px 0 14%;
+}
+
+.portfolio-expand {
+    font-weight: 600;
+}
+.portfolio-expand:hover {
+    font-weight: 600;
+    background-color: #4dcbcb;
+}
+
+/* 
 | PROJECTS display classes
 |
 +-------------------------------------------------------*/

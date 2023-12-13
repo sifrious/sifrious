@@ -45,6 +45,8 @@
         min-height: 80em;
         grid-template-columns: [first] 8% [marginRight] 40% [article] 8% [projectsCol] 22% [contactsCol] 22% [colsEnd];
         grid-template-rows: [row1-start] 6em [row1-end] 80% [third-line] auto [last-line];
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     .item-col-left-main {
