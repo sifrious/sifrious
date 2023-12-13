@@ -1,17 +1,49 @@
 #grid-container {
     display:grid;
     width: 100%;
+    position: fixed;
 }
 
-/* @media screen and (max-width:768px) {
-} */
+@media screen and (max-width:768px) {
+    #grid-container {
+        display: grid;
+        min-width: 100%;
+        min-height: 30em;
+        grid-template-columns: [grid-start] 8% [grid-main-start]42% [grid-mid] 42% [grid-main-end] 8% [grid-end];
+        grid-template-rows: [grid-top] 3.4em [grid-nav-start] 4.2em [grid-body-start] 80% [grid-end-start] 2% [grid-bottom];
+    }
+
+    .item-col-left-main {
+        grid-column:grid-start/grid-end ;
+        grid-row: grid-top/grid-nav-start;
+    }
+
+    .item-col-projects {
+        grid-column:grid-start/grid-mid;
+        grid-row:grid-nav-start/grid-body-start;
+    }
+
+    .item-col-contacts {
+        border-left: solid 1.8px black;
+        grid-column:grid-mid/grid-end;
+        grid-row:grid-nav-start/grid-body-start;
+    }
+
+    .projects-list {
+        display:none;
+    }
+
+    .mobile-nav-button {
+        padding-right: 1em;
+    }
+}
 
 @media screen and (min-width:768px) {
     #grid-container {
         display: grid;
         min-width: 100%;
         min-height: 80em;
-        grid-template-columns: [first] 8% [marginRight] 40% [article] 8% [projectsCol] 22% [contactsCol] 22% [colsend];
+        grid-template-columns: [first] 8% [marginRight] 40% [article] 8% [projectsCol] 22% [contactsCol] 22% [colsEnd];
         grid-template-rows: [row1-start] 6em [row1-end] 80% [third-line] auto [last-line];
     }
 
@@ -20,37 +52,19 @@
         grid-row: row1-start/row1-end;
     }
 
-    .left-main-item-select {
-        background-color: white;
-        background-image: linear-gradient(to right, #f5a3d3, #edd98b) !important;
-        font-weight: 400;
-    }
-
     .item-col-projects {
         grid-column: projectsCol/contactsCol;
         grid-row: row1-start/row1-end;
         width: 100%;
     }
 
-    .button-projects-select {
-        background-color: white;
-        background-image: linear-gradient(to right, #edd98b,  #8dc6d8) !important;
-        font-weight: 400;
-    }
-
     .item-col-contact {
-        grid-column: contactsCol/colsend;
+        grid-column: contactsCol/colsEnd;
         grid-row: row1-start/row1-end;
         width: 100%;
     }
 
-    .button-contact-select {
-        background-color: white;
-        background-image: linear-gradient(to right, #8dc6d8, #f5a3d3) !important;
-        font-weight: 400;
-    }
-
-    .projects-list {
+    .list-container-left {
         grid-column: projectsCol/colsEnd;
         grid-row: row1-end/third-line;
         width: 100%;
@@ -58,5 +72,15 @@
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+    }
+
+    .fullscreen {
+        grid-column: first/colsEnd;
+        grid-row: row1-end/third-line;
+    }
+
+    .main-detail {
+        grid-column: first/projects-col;
+        grid-row: row1-end/third-line;
     }
 }

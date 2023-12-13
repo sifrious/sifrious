@@ -11,16 +11,31 @@
     </head>
     <body>
         <div id="grid-container">
-            <div id="left-main-item" class="grid-item full-row-item button card-detail item-col-left-main no-gradient">
+            <div id="landing-container" class="fullscreen">
+                I am the landing div
+                <div id="landingButton">
+                    I am a detail
+                </div>
+                <div id="landing-detail">
+                    I am a button
+                </div>
+            </div>
+            <div id="skills-item" class="grid-item full-row-item button card-detail item-col-left-main no-gradient">
                 <div class="card-wrap">
-                    <div id="titleButton" class="card-text button-core" parent-id-name="left-main-item">
+                    <div id="skillsButton" class="card-text button-core" parent-id-name="skills-item">
                         <div class="button-wrap">
                             Mary Perry
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="button-projects" class="grid-item rowdiv full-row-item item-col-projects button no-gradient">
+            <div id="skills-container" class="hidden list-container-left">
+                I am a skills container.
+            </div>
+            <div id="skills-detail" class="hidden main-detail">
+                I am the skills container detail.
+            </div>
+            <div id="button-projects" class="grid-item rowdiv full-row-item item-col-projects button no-gradient mobile-nav-button">
                 <div class="card-wrap">
                     <div id="projectsButton" class="card-text button-core" parent-item-name="button-projects">
                         <div class="button-wrap">
@@ -29,16 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div id="button-contact" class="grid-item rowdiv full-row-item item-col-contacts button no-gradient">
-                <div class="card-wrap">
-                    <div id="contactButton" class="card-text button-core" parent-item-name="button-contact">
-                        <div class="button-wrap">
-                        Contact
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="projects-container" class="grid-item projects-list">
+            <div id="projects-container" class="grid-item list-container-left projects-list hidden">
                 <div class="projects-item">
                     <div class="projects-title-container">
                         <div class="projects-title-div">
@@ -99,6 +105,24 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="projects-detail" class="hidden main-detail">
+                I am the projects article detail.
+            </div>
+            <div id="button-contact" class="grid-item rowdiv full-row-item item-col-contacts button no-gradient mobile-nav-button">
+                <div class="card-wrap">
+                    <div id="contactButton" class="card-text button-core" parent-item-name="button-contact">
+                        <div class="button-wrap">
+                        Contact
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact-container" class="hidden list-container-left">
+                I am a contact container.
+            </div>
+            <div id="contact-detail" class="hidden main-detail">
+                I am a contact detail
             </div>
         </div>
     </body>
