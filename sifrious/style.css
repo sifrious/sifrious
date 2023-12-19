@@ -4,13 +4,14 @@ html {
     height: 100%;
     max-width: 100%;
     max-height: 100%;
+    color: #165050;
+    border-color: #1c6363;
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow: hidden;
     white-space: nowrap;
     position: absolute;
     font-family: 'Karla', sans-serif;
-    background-image: radial-gradient(#4dcbcb, #ebf9f9);
     background-repeat:repeat-x;
     background-attachment:fixed;
     background-position: left top;
@@ -36,7 +37,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 2.3px solid black;
+    border-bottom: 2.3px solid #1c6363;
     position: relative;
 }
 
@@ -121,7 +122,7 @@ header {
 }
 
 .full-row-item {
-    border-bottom: 1.8px solid black;
+    border-bottom: 1.8px solid #1c6363;
 }
 
 /* 
@@ -141,24 +142,8 @@ header {
     padding: 1.6% 0 0 0;
 }
 
-#landing-detail {
-    display: block;
-    width: 70%;
-    font-size: .5em;
-    margin: 0 auto 0 14% ;
-    padding: 0%;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    white-space: normal;
-}
-
-#landingButton {
-    line-height: .7em;
-    font-weight: 600;
-    width: auto;
-    font-size: 2em;
-    padding: 14% 0 0 0;
-    margin: 8% 2px 0 14%;
+#landing-button-container {
+    display:none !important;
 }
 
 .portfolio-expand {
@@ -173,10 +158,22 @@ header {
 | PROJECTS display classes
 |
 +-------------------------------------------------------*/
-.projects-item {
-    border-left: 1.8px solid black;
-    border-bottom: 1.8px solid black;
-    width: 100%;
+.projects-button {
+    margin: 0;
+    padding: 0;
+    border-left: 1.8px solid #165050 !important;
+    border-top: .8px solid #165050 !important;
+    border-right: none;
+    border-bottom: none;
+    width: 103%;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    position:relative;
+}
+
+.projects-button:hover {
+    background-color: #fcf8e9;
 }
 
 .projects-title-container {
@@ -192,15 +189,109 @@ header {
     flex-direction: row;
 }
 
-.projects-pre {
+.projects-detail-key {
     font-size: 1em;
     font-weight: 100;
-    padding-right: 17px;
+    padding-right: 5%;
 }
 
 .projects-name {
     font-family: 'Courier Prime';
-    font-size: 1.4em;
+    font-size: 1.9em;
+}
+
+/* --------- projects expand area */
+
+.project-detail--hidden {
+    display:none !important;
+}
+
+/* detail expansion */
+.project-detail, .project-detail-title {
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    justify-content: left;
+    border-bottom: .3px solid #1c6363;
+    width: 100% !important;
+    line-height: 1.1em;
+}
+
+.project-detail-grid, .project-detail-grid-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100% !important;
+    padding: 0;
+    position: relative;
+    border-bottom: 1.2px solid #1c6363;
+}
+
+.project-detail-key, .project-detail-key-title {
+    font-weight: 200;
+    font-size: 1.1em;
+    width: 12%;
+    padding-right: .5% !important;
+    text-align: right;
+    margin-top: auto;
+}
+
+.project-detail-key-title {
+    padding-bottom: .2%;
+}
+
+.project-detail-value, .project-detail-value-title {
+    display: inline-block;
+    text-align: left;
+    padding-left: 1%;
+    height: auto;
+    white-space: normal;
+    font-family: 'Courier Prime';
+}
+
+.project-detail-value {
+    padding: 2% 0 0 8px !important;
+}
+
+.project-detail-value-title {
+    font-size: 1.8em !important;
+    height: auto;
+    padding: 4% 1% 1% 1%;
+}
+
+.project-value-wide {
+    width: 98% !important;
+    font-size: 1.2em;
+    padding: 1.5% !important;
+}
+
+.project-value-standard {
+    width: 87% !important;
+    font-size: 1.2em;
+}
+
+.project-detail-value.project-value-standard {
+    border-left: .8px solid #1c6363
+}
+
+/* Landing Rules for Mobile for  */
+#landing-detail {
+    display: block;
+    width: 88%;
+    font-size: .45em;
+    margin: -4% 0 0 2% ;
+    padding: 0%;
+    overflow-wrap: break-word !important;
+    white-space: normal;
+}
+
+#landing-button {
+    font-weight: 700;
+    text-align: justify;
+    width: 100%;
+    font-size: 1.6em;
+    padding: 2% 0 0 0 ;
 }
 
 /* 
@@ -208,6 +299,10 @@ header {
 |
 +-------------------------------------------------------*/
 @media screen and (max-width:768px) {
+
+    html {
+        background-image: radial-gradient(#4dcbcb, #ebf9f9);
+    }
 
     header {
         flex-wrap: wrap;
@@ -229,6 +324,10 @@ header {
 
 @media screen and (min-width: 769px) {
     /* CSS rules for screens that are between 769px and 1024px wide */
+    html {
+        background-image: radial-gradient(#4dcbcb, #ebf9f9);
+    }
+
     header {
         min-height: 2em;
         height: 6em;
@@ -243,11 +342,34 @@ header {
     }
 
     .rowdiv {
-        border-left: 1.8px solid black !important;
+        border-left: 1.8px solid #1c6363 !important;
     }
 
     #button-group {
         width: 44% !important;
+    }
+
+    /* Landing rules for large screens only */
+
+    #landing-detail {
+        display: block;
+        width: 70%;
+        font-size: .45em;
+        margin: 0 auto 0 14% ;
+        padding: 0%;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal;
+    }
+    
+    #landing-button {
+        line-height: .7em;
+        font-weight: 500;
+        letter-spacing: -5px;
+        width: auto;
+        font-size: 2em;
+        padding: 4% 0 0 0;
+        margin: 0 2px 0 10%;
     }
 }
 

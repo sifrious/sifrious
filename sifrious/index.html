@@ -11,8 +11,12 @@
     </head>
     <body>
         <div id="grid-container">
-            <div id="landing-container" class="fullscreen">
-                <div id="landingButton">
+            <div id="landing-container" class="fullscreen fullscreen-mobile">
+                <div id="landing-button-container">
+                    <div id="landingButton">
+                    </div>
+                </div>
+                <div id="landing-button">
                     welcome
                 </div>
                 <div id="landing-detail">
@@ -54,66 +58,501 @@
                     </div>
                 </div>
             </div>
-            <div id="projects-container" class="grid-item list-container-left projects-list hidden">
-                <div class="projects-item">
-                    <div class="projects-title-container">
-                        <div class="projects-title-div">
-                            <div class="projects-pre">
-                                Name.
-                            </div>
-                            <div class="projects-name">
-                                Reteer
+            <div id="projects-container" class="grid-item fullscreen-mobile list-container-left hidden">
+            <!--                
+                <div id="">
+                    <button
+                        class="projects-button"
+                        aria-expanded="false"
+                        aria-controls="project-">
+                        <div class="project-detail-title">
+                            <div class="project-detail-grid-title">
+                                <div class="project-detail-key-title">Name.</div>
+                                <div class="project-detail-value-title project-value-standard project-title">
+                                    PROJECT NAME
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div id="" class="project-detail project-detail--hidden">
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Type.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-type">
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Status.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-status">
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Uses.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-uses">
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Repo.
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    github.com/sifrious/repo-name
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Website
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    www.website.com
+                                    </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-value project-value-wide project-detail-description">
+                                    project description goes here
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div> -->
+                <div id="reteer" class="projects-item projects-item--hidden">
+                    <button
+                        class="projects-button"
+                        aria-expanded="false"
+                        aria-controls="project-reteer">
+                        <div class="project-detail-title">
+                            <div class="project-detail-grid-title">
+                                <div class="project-detail-key-title">Name.</div>
+                                <div class="project-detail-value-title project-value-standard project-title">Reteer</div>
+                            </div>
+                        </div>
+                        <div id="reteer" class="project-detail project-detail--hidden">
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Type.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-type">
+                                    Preliminary version of open source application
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Status.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-status">
+                                    Limited alpha.
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Uses.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-uses">
+                                    Laravel, Jetstream, RESTful API, TDD with Pest
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Repo.
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Website
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-value project-value-wide project-detail-description">
+                                    Application to manage volunteer sceduling for organizations.
+                                    Technical focus is authentication, utilizing roles and permissions in Laravel Jetstream.
+                                </div>
+                            </div>
+                        </div>
+                    </button>
                 </div>
-                <div class="projects-item">
-                    <div class="projects-title-container">
-                        <div class="projects-title-div">
-                            <div class="projects-pre">
-                                Name.
-                            </div>
-                            <div class="projects-name">
-                                Working Title Only
+                <div id="working-title" class="projects-item projects-item--hidden">
+                    <button 
+                        class="projects-button"
+                        aria-expanded="false"
+                        aria-controls="project-working-title">
+                        <div class="project-detail-title">
+                            <div class="project-detail-grid-title">
+                                <div class="project-detail-key-title">Name.</div>
+                                <div class="project-detail-value-title project-value-standard project-title">
+                                    Working Title
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div id="reteer-project-detail" class="project-detail project-detail--hidden">
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Type.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-type">
+                                    Local server + chrome extension with RESTful API
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Status.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-status">
+                                    in development
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Uses.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-uses">
+                                    python/flask, postgreSQL, javascript, google chrome API
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Repo.
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    github.com/sifrious/repo-name
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Website
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    www.website.com
+                                    </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-value project-value-wide project-detail-description">
+                                    Customizable solution for testing websites through manual visits or automated crawling. Do CRUD stuff with the data you get.
+                                </div>
+                            </div>
+                        </div>
+                    </button>
                 </div>
-                <div class="projects-item">
-                    <div class="projects-title-container">
-                        <div class="projects-title-div">
-                            <div class="projects-pre">
-                                Name.
-                            </div>
-                            <div class="projects-name">
-                                fyyurstorm
+                <div id="four-letter-words" class="projects-item projects-item--hidden">
+                    <button
+                        class="projects-button"
+                        aria-expanded="false"
+                        aria-controls="project-">
+                        <div class="project-detail-title">
+                            <div class="project-detail-grid-title">
+                                <div class="project-detail-key-title">Name.</div>
+                                <div class="project-detail-value-title project-value-standard project-title">
+                                    Four Letter Words
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div id="" class="project-detail project-detail--hidden">
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Type.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-type">
+                                    React Applet
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Status.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-status">
+                                    design phase
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Uses.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-uses">
+                                    client-side react
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Repo.
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    github.com/sifrious/repo-name
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Website
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    www.website.com
+                                    </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-value project-value-wide project-detail-description">
+                                    An off-by-one spelling game. Change a letter in a word to make a new one. Get a streak.
+                                    No repeats, but hesitation is allowed.
+                                </div>
+                            </div>
+                        </div>
+                    </button>
                 </div>
-                <div class="projects-item">
-                    <div class="projects-title-container">
-                        <div class="projects-title-div">
-                            <div class="projects-pre">
-                                Name.
-                            </div>
-                            <div class="projects-name">
-                                4 Letter Words
+                <div id="licence-plate-game" class="projects-item projects-item--hidden">
+                    <button
+                        class="projects-button"
+                        aria-expanded="false"
+                        aria-controls="project-licence-plate-game">
+                        <div class="project-detail-title">
+                            <div class="project-detail-grid-title">
+                                <div class="project-detail-key-title">Name.</div>
+                                <div class="project-detail-value-title project-value-standard project-title">
+                                    Liscence Plate Game
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div id="" class="project-detail project-detail--hidden">
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Type.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-type">
+                                    React applet.
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Status.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-status">
+                                    Design.
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Uses.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-uses">
+                                    React.
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Repo.
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    github.com/sifrious/repo-name
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Website
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    www.website.com
+                                    </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-value project-value-wide project-detail-description">
+                                    A digital version of a game some people like to play when they're driving. 
+                                    See how many words you can make out of whatever liscence plate you see.
+                                    Argue about which words and acronyms and whatnot should count. 
+                                </div>
+                            </div>
+                        </div>
+                    </button>
                 </div>
-                <div class="projects-item">
-                    <div class="projects-title-container">
-                        <div class="projects-title-div">
-                            <div class="projects-pre">
-                                Name.
-                            </div>
-                            <div class="projects-name">
-                                Liscence Plate Game
+                <div id="mollify" class="projects-item projects-item--hidden">
+                    <button
+                        class="projects-button"
+                        aria-expanded="false"
+                        aria-controls="project-mollify" />
+                        <div class="project-detail-title">
+                            <div class="project-detail-grid-title">
+                                <div class="project-detail-key-title">Name.</div>
+                                <div class="project-detail-value-title project-value-standard project-title">
+                                    Mollify
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div id="" class="project-detail project-detail--hidden">
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Type.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-type">
+                                    Local Flask Application
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Status.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-status">
+                                    In Progress
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Uses.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-uses">
+                                    Flask, Javascript, React, Angular, Python, postgreSQL, psycopg2, SQLalchemy.
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Repo.
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    github.com/sifrious/repo-name
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Website
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    www.website.com
+                                    </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-value project-value-wide project-detail-description">
+                                    A Flask Scaffolding Application with Strong opinions.
+                                    Database-first thinking with minimalist design.
+                                    For creating Flask applications with scaffolded.
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div id="jobs-board" class="projects-item projects-item--hidden">
+                    <button
+                        class="projects-button"
+                        aria-expanded="false"
+                        aria-controls="project-">
+                        <div class="project-detail-title">
+                            <div class="project-detail-grid-title">
+                                <div class="project-detail-key-title">Name.</div>
+                                <div class="project-detail-value-title project-value-standard project-title">
+                                    Jobs Board
+                                </div>
+                            </div>
+                        </div>
+                        <div id="" class="project-detail project-detail--hidden">
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Type.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-type">
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Status.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-status">
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Uses.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-uses">
+                                    Laravel, Jetstream, Tailwind, some email stuff.
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Repo.
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    github.com/sifrious/repo-name
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Website
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    www.website.com
+                                    </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-value project-value-wide project-detail-description">
+                                    A website for job seekers and job searchers; an 'indie hacker' portfolio staple.
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div id="personal-website" class="projects-item projects-item--hidden">
+                    <button
+                        class="projects-button"
+                        aria-expanded="false"
+                        aria-controls="project-personal-website">
+                        <div class="project-detail-title">
+                            <div class="project-detail-grid-title">
+                                <div class="project-detail-key-title">Name.</div>
+                                <div class="project-detail-value-title project-value-standard project-title">
+                                    My Personal Website
+                                </div>
+                            </div>
+                        </div>
+                        <div id="" class="project-detail project-detail--hidden">
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Type.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-type">
+                                    Web Site
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Status.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-status">
+                                    Merely a twinkle in my eye.
+                                </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-key">
+                                    Uses.
+                                </div>
+                                <div class="project-detail-value project-value-standard project-detail-uses">
+                                    Drupal, React, Javascript, Laravel
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Repo.
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    github.com/sifrious/repo-name
+                                </div>
+                            </div>
+                            <div class="project-detail-grid hidden">
+                                <div class="project-detail-key">
+                                    Website
+                                </div>
+                                <div class="project-detail-value  project-value-standard">
+                                    www.website.com
+                                    </div>
+                            </div>
+                            <div class="project-detail-grid">
+                                <div class="project-detail-value project-value-wide project-detail-description">
+                                    Blog posts, musings, digital art, easter eggs, custom Drupal extensions.
+                                    What more could you want?
+                                </div>
+                            </div>
+                        </div>
+                    </button>
                 </div>
             </div>
             <div id="projects-detail" class="hidden main-detail">

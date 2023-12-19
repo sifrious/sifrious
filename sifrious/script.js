@@ -144,6 +144,17 @@ const toggleRainbows = function(e) {
     nav_select = addRainbow(parent_div);
 };
 
+const toggleProjectVisibility = function (event) {
+
+}
+
+const addProjectListeners = function () {
+    const projectButtons = document.getElementById("projects-item");
+    for (let projectButton of ProjectButtons) {
+        button.addEventListener("click", toggleProjectVisibilty)
+    }
+}
+
 const addNavListeners = function () {
     for (let button of navButtons) {
         button.addEventListener("click", toggleRainbows);
@@ -155,10 +166,11 @@ const addNavListeners = function () {
             button.addEventListener("click", window[group_function_name]);
         };
     };
-    console.log(nav_select_group);
+
 }
 
 window.onload = function() {
     console.log("it fired");
     addNavListeners();
+    addProjectListeners();
 };

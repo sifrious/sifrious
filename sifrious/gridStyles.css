@@ -4,6 +4,7 @@
     position: fixed;
 }
 
+/* Small Screens */
 @media screen and (max-width:768px) {
     #grid-container {
         display: grid;
@@ -36,8 +37,19 @@
     .mobile-nav-button {
         padding-right: 1em;
     }
+
+    .projects-list {
+        grid-column: grid-start/grid-end;
+        grid-row: grid-body-start/grid-bottom;
+    }
+
+    .fullscreen-mobile {
+        grid-column: grid-start/grid-end;
+        grid-row: grid-body-start/grid-bottom;
+    }
 }
 
+/* Large Screens */
 @media screen and (min-width:768px) {
     #grid-container {
         display: grid;
@@ -84,5 +96,10 @@
     .main-detail {
         grid-column: first/projects-col;
         grid-row: row1-end/third-line;
+    }
+
+    /* Styles for hiding and showing projects on large screens */
+    .project-detail--hidden:hover {
+        display: block;
     }
 }
