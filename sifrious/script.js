@@ -145,7 +145,7 @@ const toggleRainbows = function(e) {
 };
 
 const toggleProjectVisibility = function (event) {
-
+    
 }
 
 const addProjectListeners = function () {
