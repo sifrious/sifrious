@@ -8,13 +8,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div id="grid-container">
+        <!-- Landing/Default Content -->
             <div id="landing-container" class="fullscreen fullscreen-mobile">
                 <div id="landing-button-container">
-                    <div id="landingButton">
-                    </div>
+                    <button id="landingButton" 
+                        class="nav-bar-button" 
+                        aria-expanded="false"
+                        aria-controls=""
+                        data-attribute="landing"->
+                        <!-- This 'button' is required to exist to enable toggling
+                        functionality but should never display anything -->
+                    </button>
                 </div>
                 <div id="landing-button">
                     welcome
@@ -37,11 +45,16 @@
             </div>
             <div id="skills-item" class="grid-item full-row-item button card-detail item-col-left-main no-gradient">
                 <div class="card-wrap">
-                    <div id="skillsButton" class="card-text button-core" parent-id-name="skills-item">
+                    <button id="skillsButton"
+                        class="card-text button-core nav-bar-button" 
+                        aria-expanded="false"
+                        aria-controls="skills-container"
+                        data-attribute="skills"
+                        parent-item-id="skills-item">
                         <div class="button-wrap">
                             Mary Perry
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div id="skills-container" class="hidden list-container-left">
@@ -49,20 +62,26 @@
             </div>
             <div id="skills-detail" class="hidden main-detail">
             </div>
+        <!-- Projects content -->
             <div id="button-projects" class="grid-item rowdiv full-row-item item-col-projects button no-gradient mobile-nav-button">
                 <div class="card-wrap">
-                    <div id="projectsButton" class="card-text button-core" parent-item-name="button-projects">
+                    <button id="projectsButton"
+                        class="card-text button-core nav-bar-button"
+                        aria-expanded="false"
+                        aria-controls="projects-container"
+                        data-attribute="projects"
+                        parent-item-id="button-projects">
                         <div class="button-wrap">
                         Projects
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div id="projects-container" class="grid-item fullscreen-mobile list-container-left hidden">
             <!--                
                 <div id="">
                     <button
-                        class="projects-button"
+                        class="projects-button button-core"
                         aria-expanded="false"
                         aria-controls="project-">
                         <div class="project-detail-title">
@@ -121,7 +140,7 @@
                 </div> -->
                 <div id="reteer" class="projects-item projects-item--hidden">
                     <button
-                        class="projects-button"
+                        class="projects-button button-core"
                         aria-expanded="false"
                         aria-controls="project-reteer">
                         <div class="project-detail-title">
@@ -180,7 +199,7 @@
                 </div>
                 <div id="working-title" class="projects-item projects-item--hidden">
                     <button 
-                        class="projects-button"
+                        class="projects-button button-core"
                         aria-expanded="false"
                         aria-controls="project-working-title">
                         <div class="project-detail-title">
@@ -242,7 +261,7 @@
                 </div>
                 <div id="four-letter-words" class="projects-item projects-item--hidden">
                     <button
-                        class="projects-button"
+                        class="projects-button button-core"
                         aria-expanded="false"
                         aria-controls="project-">
                         <div class="project-detail-title">
@@ -305,7 +324,7 @@
                 </div>
                 <div id="licence-plate-game" class="projects-item projects-item--hidden">
                     <button
-                        class="projects-button"
+                        class="projects-button button-core"
                         aria-expanded="false"
                         aria-controls="project-licence-plate-game">
                         <div class="project-detail-title">
@@ -369,7 +388,7 @@
                 </div>
                 <div id="mollify" class="projects-item projects-item--hidden">
                     <button
-                        class="projects-button"
+                        class="projects-button button-core"
                         aria-expanded="false"
                         aria-controls="project-mollify" />
                         <div class="project-detail-title">
@@ -433,7 +452,7 @@
                 </div>
                 <div id="jobs-board" class="projects-item projects-item--hidden">
                     <button
-                        class="projects-button"
+                        class="projects-button button-core"
                         aria-expanded="false"
                         aria-controls="project-">
                         <div class="project-detail-title">
@@ -493,7 +512,7 @@
                 </div>
                 <div id="personal-website" class="projects-item projects-item--hidden">
                     <button
-                        class="projects-button"
+                        class="projects-button button-core"
                         aria-expanded="false"
                         aria-controls="project-personal-website">
                         <div class="project-detail-title">
@@ -557,13 +576,19 @@
             </div>
             <div id="projects-detail" class="hidden main-detail">
             </div>
+        <!-- Contacts details -->
             <div id="button-contact" class="grid-item rowdiv full-row-item item-col-contacts button no-gradient mobile-nav-button">
                 <div class="card-wrap">
-                    <div id="contactButton" class="card-text button-core" parent-item-name="button-contact">
+                    <button id="contactButton"
+                        class="card-text button-core nav-bar-button"
+                        aria-expanded="false"
+                        aria-controls="contact-container"
+                        data-attribute="contact"aÀ0
+                        parent-item-id="button-contact">
                         <div class="button-wrap">
                         Contact
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div id="contact-container" class="hidden list-container-left">

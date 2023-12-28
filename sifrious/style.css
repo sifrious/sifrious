@@ -28,6 +28,16 @@ body {
     display: none !important;
 }
 
+.button-core {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    color: #165050;
+}
+
 /* 
 | GRADIENT DISPLAY RULES
 |
@@ -49,7 +59,7 @@ header {
     background-image: none !important;
 }
 
-.skills-item-select {
+.button-skills-select {
     background-color: white;
     background-image: linear-gradient(to right, #f5a3d3, #edd98b) !important;
     font-weight: 400;
@@ -204,6 +214,10 @@ header {
 
 .project-detail--hidden {
     display:none !important;
+}
+
+.projects-button {
+
 }
 
 /* detail expansion */
