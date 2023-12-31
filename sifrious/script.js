@@ -6,7 +6,7 @@ var nav_select_group = "landing";
 var nav_select_project = null;
 var nav_highlight_div = null;
 var nav_highlight_name = null;
-var displaying = "default";
+var displaying = "landing";
 // const container = document.getElementById('grid-container');
 // const navLandingButton = document.getElementById('landingButton');
 // const navSkillsButton = document.getElementById('skillsButton');
@@ -34,7 +34,7 @@ function getParentDiv(nav_button) {
 function updateNavSelect(new_selection) {
     if (new_selection === null) {
         nav_select = nav_landing;
-        nav_select.group = 'landing'
+        nav_select_group = 'landing'
         nav_highlight_div = null;
         nav_highlight_name = null;
     } else {
@@ -52,115 +52,63 @@ function updateNavSelect(new_selection) {
         console.log(`nav_highlight_div: '${nav_highlight_div.id}'`);
         console.log(nav_highlight_div);
     }
-}
-
-function updateProjectSelect(project) {
-    console.log("--------------- updated nav_select_project ---------------");
-}
+};
 
 /*
     ELEMENT GROUP FUNCTIONS
 */
 
-function updateNavSelectGroup(group_name) {
-    let global_group_name = `${group_name.charAt(0).toUpperCase()}${group_name.slice(1)}`;
-    if (nav_select_group === global_group_name && nav_select_group != 'landing') {
-        displayed_group = getToggleClassElements(group_name);
-        nav_select = updateNavSelect(null);
-        toggleHidden(displayed_group);
-        console.log(`nav select group should be Landing here ${nav_select_group}; returning reset`)
-        return 'reset';
+function updateNavGroupDisplay() {
+    // reset to landing if currently displayed selection is clicked
+    if (nav_select_group === displaying) {
+        updateNavSelect(null);
     };
-    nav_select_group = global_group_name;
-    console.log(`in UPDATENAVSELECTGROUP for ${group_name}: group name in update nav select group is ${nav_select_group} <= ${group_name}`);
-    return group_name;
+    console.log(`navigated to ${nav_select_group} from ${displaying}`);
+    toggleHidden(getToggleClassElements(displaying)); // hide old group
+    toggleHidden(getToggleClassElements(nav_select_group)); // show new group
+    displaying = nav_select_group; // update displaying to hold current display group
+    return displaying;
 };
 
-function getToggleClassElements(id) {
-    let group_name = (id && id.length > 0)? id :nav_select_group.toLowerCase();
-    let list_container = document.getElementById(`${group_name}-container`);
-    let detail = document.getElementById(`${group_name}-detail`);
-    return {"list": list_container, "article": detail, "group": group_name};
+function getToggleClassElements(group_name) {
+    return {"list": document.getElementById(`${group_name}-container`), 
+        "article": document.getElementById(`${group_name}-detail`), 
+        "group": group_name};
 }
 
 function toggleHidden(elements) {
-    function hideAllMembers(elements) {
-        console.log(`hiding all member of group ${elements.group}`);
-        for (let element of Object.keys(elements)) {
-            if (elements[element].classList && element !== 'group') {
-                if (elements[element].classList.contains('hidden') === false) {
-                    elements[element].classList.add('hidden');  
-                }; 
+    for (let element of Object.keys(elements)) {
+        const div = elements[element];
+        console.log("toggleHidden");
+        console.log(elements);
+        if (div.classList) {
+            if (div.classList.contains('hidden') === true) {
+                div.classList.remove('hidden');
+                console.log(`removed hidden to classlist ${div.classList}`);
+            } else {
+                div.classList.add('hidden');
+                console.log(`added hidden to ${elements.group} classlist ${div.classList}`);
             };
         };
     };
+};
 
-    function showAllMembers(elements) {
-        console.log(`showing all member of group ${elements.group}`);
-        for (let element of Object.keys(elements)) {
-            if (elements[element].classList && element !== 'group') {
-                if (elements[element].classList.contains('hidden') === true) {
-                    elements[element].classList.remove('hidden');  
-                };  
-            };
-        };
-    };
-
-    if (elements.group.slice(1) !== nav_select_group.slice(1)) {
-        hideAllMembers(elements);
-        return null;
-    };
-    if (elements !== 'reset') {
-        showAllMembers(elements);
-    };
-}
-
-function toggleDisplayGroup(e) {
-    id = e.target.parentNode.id.slice(0, e.target.parentNode.id.toLowerCase().indexOf("button"));
-    console.log(getToggleClassElements())
+function toggleDisplayGroup() {
+    id = nav_select_group;
     let displayed_group = getToggleClassElements();
-    e = updateNavSelectGroup(id);
-    if (e === 'reset') {
-        toggleHidden(getToggleClassElements('landing'));
-    } else {
-        toggleHidden(displayed_group);
-        toggleHidden(getToggleClassElements(e));
-    };
-}
-
-function toggleLandingDiv(e) {
-    console.log("hit toggle landing div");
-    toggleDisplayGroup(e);
-}
-
-function toggleSkillsDiv(e) {
-    console.log("hit toggle skills div -------------------------------------------------------------------");
-    toggleDisplayGroup(e);
-}
-
-function toggleProjectsDiv(e) {
-    console.log("hit toggle projects div");
-    toggleDisplayGroup(e);
-}
-
-function toggleContactDiv(e) {
-    console.log("hit toggle contact div");
-    toggleDisplayGroup(e);
-}
+    console.log(displayed_group);
+    updateNavGroupDisplay();
+};
 
 /*
     GRADIENT FUNCTIONS
 */
 
 
-
 const addRainbow = function(targetParent) {
     console.log(`adding a rainbow to target using class ${nav_highlight_name}`);
     targetParent.classList.remove('no-gradient');
     targetParent.classList.add(nav_highlight_name);
-    // console.log(`target div id - ${targetParent.id}`);
-    // console.log(targetParent);
-    // console.log(targetClassName);
     return targetParent;
 };
 
@@ -183,7 +131,6 @@ const toggleRainbows = function() {
 };
 
 const selectNavGroup = function (e) {
-    console.log(`************************************** in selectNavGroup nav_select behavior is`)
     // remove gradient from previous selection, if it exists
     if (nav_highlight_div !== null) {
         nav_select.setAttribute('aria-expanded', 'false');
@@ -192,9 +139,6 @@ const selectNavGroup = function (e) {
         console.log(`didnt remove rainbow because nav_highlight_div was ${nav_highlight_div}`);
     };
     const new_nav_select = e.target.offsetParent;
-    console.log(`'COMPARING new_nav_select ${new_nav_select.id}' with ${nav_select.id}: ${new_nav_select === nav_select}`); 
-    console.log(new_nav_select);
-    console.log(nav_select);
     if (new_nav_select === nav_select) {
         console.log("toggle off");
         updateNavSelect(null);
@@ -207,14 +151,8 @@ const selectNavGroup = function (e) {
     } else if (nav_select.getAttribute('aria-expanded') === 'false') {
         nav_select.setAttribute('aria-expanded', 'true');
     };
-    // add gradient to new selection
     toggleRainbows(nav_select);
-    // button.addEventListener("click", toggleRainbows);
 }
-
-// const toggleProjectVisibility = function (event) {
-    
-// }
 
 const addProjectListeners = function () {
     const projectButtons = document.getElementsByClassName("project-button");
@@ -227,9 +165,9 @@ const addNavListeners = function () {
     const navButtons = document.getElementsByClassName('nav-bar-button');
     for (let button of navButtons) {
         button.addEventListener("click", selectNavGroup);
+        button.addEventListener("click", toggleDisplayGroup);
     };
-
-}
+};
 
 window.onload = function() {
     updateNavSelect(null);
