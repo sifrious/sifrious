@@ -26,8 +26,8 @@ function getParentDiv(nav_button) {
     if (parent_div) {
         return parent_div
     } else {
-        console.log("target parent not found");
-        console.log(nav_button);
+        // console.log("target parent not found");
+        // console.log(nav_button);
     }
 }
 
@@ -43,14 +43,14 @@ function updateNavSelect(new_selection) {
         nav_highlight_div = getParentDiv(nav_select);
         nav_highlight_name = `button-${nav_select_group}-select`; 
     };
-    console.log("--------------- updated nav_select ---------------");
-    console.log(`nav_select: '${nav_select.id}'`);
-    console.log(nav_select);
-    console.log(`nav_select_group: '${nav_select_group}'`);
-    console.log(`nav_highlight_name: '${nav_highlight_name}'`);
+    // console.log("--------------- updated nav_select ---------------");
+    // console.log(`nav_select: '${nav_select.id}'`);
+    // console.log(nav_select);
+    // console.log(`nav_select_group: '${nav_select_group}'`);
+    // console.log(`nav_highlight_name: '${nav_highlight_name}'`);
     if (nav_highlight_div !== null) {
-        console.log(`nav_highlight_div: '${nav_highlight_div.id}'`);
-        console.log(nav_highlight_div);
+        // console.log(`nav_highlight_div: '${nav_highlight_div.id}'`);
+        // console.log(nav_highlight_div);
     }
 };
 
@@ -63,7 +63,7 @@ function updateNavGroupDisplay() {
     if (nav_select_group === displaying) {
         updateNavSelect(null);
     };
-    console.log(`navigated to ${nav_select_group} from ${displaying}`);
+    // console.log(`navigated to ${nav_select_group} from ${displaying}`);
     toggleHidden(getToggleClassElements(displaying)); // hide old group
     toggleHidden(getToggleClassElements(nav_select_group)); // show new group
     displaying = nav_select_group; // update displaying to hold current display group
@@ -79,15 +79,15 @@ function getToggleClassElements(group_name) {
 function toggleHidden(elements) {
     for (let element of Object.keys(elements)) {
         const div = elements[element];
-        console.log("toggleHidden");
-        console.log(elements);
+        // console.log("toggleHidden");
+        // console.log(elements);
         if (div.classList) {
             if (div.classList.contains('hidden') === true) {
                 div.classList.remove('hidden');
-                console.log(`removed hidden to classlist ${div.classList}`);
+                // console.log(`removed hidden to classlist ${div.classList}`);
             } else {
                 div.classList.add('hidden');
-                console.log(`added hidden to ${elements.group} classlist ${div.classList}`);
+                // console.log(`added hidden to ${elements.group} classlist ${div.classList}`);
             };
         };
     };
@@ -96,9 +96,20 @@ function toggleHidden(elements) {
 function toggleDisplayGroup() {
     id = nav_select_group;
     let displayed_group = getToggleClassElements();
-    console.log(displayed_group);
+    // console.log(displayed_group);
     updateNavGroupDisplay();
 };
+
+// 
+
+function toggleProjectVisibilty(e) {
+    const title_div = e.target;
+    const parent_div = e.target.parentElement.offsetParent;
+    const detail_div = parent_div.getElementsByClassName('project-detail')[0];
+    console.log(title_div);
+    console.log(detail_div);
+    console.log(parent_div);
+}
 
 /*
     GRADIENT FUNCTIONS
@@ -106,16 +117,16 @@ function toggleDisplayGroup() {
 
 
 const addRainbow = function(targetParent) {
-    console.log(`adding a rainbow to target using class ${nav_highlight_name}`);
+    // console.log(`adding a rainbow to target using class ${nav_highlight_name}`);
     targetParent.classList.remove('no-gradient');
     targetParent.classList.add(nav_highlight_name);
     return targetParent;
 };
 
 const removeRainbow = function() {
-    console.log(`hit removeRainbow with target_parent`);
+    // console.log(`hit removeRainbow with target_parent`);
     if (nav_highlight_div && nav_highlight_div !== null) {
-        console.log("removing based on criteria ");
+        // console.log("removing based on criteria ");
         nav_highlight_div.style.backgroundImage = 'none';
         nav_highlight_div.classList.remove(nav_highlight_name);
         nav_highlight_div.classList.add('no-gradient');
@@ -136,14 +147,14 @@ const selectNavGroup = function (e) {
         nav_select.setAttribute('aria-expanded', 'false');
         toggleRainbows();
     } else {
-        console.log(`didnt remove rainbow because nav_highlight_div was ${nav_highlight_div}`);
+        // console.log(`didnt remove rainbow because nav_highlight_div was ${nav_highlight_div}`);
     };
     const new_nav_select = e.target.offsetParent;
     if (new_nav_select === nav_select) {
-        console.log("toggle off");
+        // console.log("toggle off");
         updateNavSelect(null);
     } else {
-        console.log("new thing here");
+        // console.log("new thing here");
         updateNavSelect(e.target.offsetParent);
     }
     if (nav_select.getAttribute('aria-expanded') === 'true') {
@@ -155,8 +166,9 @@ const selectNavGroup = function (e) {
 }
 
 const addProjectListeners = function () {
-    const projectButtons = document.getElementsByClassName("project-button");
+    const projectButtons = document.getElementsByClassName("projects-button");
     for (let projectButton of projectButtons) {
+        console.log(projectButton);
         projectButton.addEventListener("click", toggleProjectVisibilty)
     }
 }
@@ -171,7 +183,6 @@ const addNavListeners = function () {
 
 window.onload = function() {
     updateNavSelect(null);
-    console.log("it fired");
     addNavListeners();
     addProjectListeners();
 };
