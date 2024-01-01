@@ -210,14 +210,26 @@ header {
     font-size: 1.9em;
 }
 
+.projects-container--hidden {
+    display:none !important;
+}
+
+.skills-container--hidden {
+    display:none !important;
+}
+
+.contact-container--hidden {
+    display:none !important;
+}
+
+.landing-container--hidden {
+    display:none !important;
+}
+
 /* --------- projects expand area */
 
 .project-detail--hidden {
     display:none !important;
-}
-
-.projects-button {
-
 }
 
 /* detail expansion */
