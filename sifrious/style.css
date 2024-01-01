@@ -172,7 +172,6 @@ header {
     margin: 0;
     padding: 0;
     border-left: 1.8px solid #165050 !important;
-    border-top: .8px solid #165050 !important;
     border-right: none;
     border-bottom: none;
     width: 103%;
@@ -238,7 +237,6 @@ header {
     flex-direction: column;
     overflow-wrap: break-word;
     justify-content: left;
-    border-bottom: .3px solid #1c6363;
     width: 100% !important;
     line-height: 1.1em;
 }
