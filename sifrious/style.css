@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+*:hover,
+*:hover:before,
+*:hover:after {
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the div */
+    transition: background-color 0.3s ease; 
+}
+
 
 html {
     width: 100%;
@@ -84,6 +91,13 @@ header {
     font-weight: 400;
 }
 
+.button-skills-select, .project-detail-grid-title:hover {
+    background-image: linear-gradient(to right, #edd98b,  #8dc6d8, #f5a3d3);
+}
+
+
+
+
 /* 
 | CARD DISPLAY RULES
 |
@@ -131,7 +145,7 @@ header {
 }
 
 .button-wrap:hover {
-    background-color: #edd98b;
+    background-color: #96dfde;
     text-align: center; /* Align the text to the center */
     cursor: pointer; /* Change the cursor to a pointer when hovering over the div */
     transition: background-color 0.3s ease; /* Add a transition effect when hovering over the div */
@@ -163,6 +177,10 @@ header {
     display:none !important;
 }
 
+#landing-button {
+    width: auto;
+}
+
 .portfolio-expand {
     font-weight: 600;
 }
@@ -188,8 +206,8 @@ header {
     position:relative;
 }
 
-.projects-button:hover {
-    background-color: #fcf8e9;
+.project-detail {
+    background-color: #96dfde;
 }
 
 .projects-title-container {

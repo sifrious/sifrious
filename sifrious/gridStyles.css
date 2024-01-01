@@ -94,8 +94,18 @@
     }
 
     .main-detail {
-        grid-column: first/projects-col;
+        grid-column: first/projectsCol;
         grid-row: row1-end/third-line;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        /* border: 2px solid red; */
+    }
+
+    p {
+        width: 98%;
+        /* border: 2px solid green; */
+        white-space: normal;
+        padding-left: 8px;
     }
 
     /* Styles for hiding and showing projects on large screens */
