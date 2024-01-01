@@ -1,3 +1,10 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
 html {
     width: 100%;
     margin: -10px;
