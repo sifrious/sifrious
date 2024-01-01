@@ -55,19 +55,23 @@ function updateNavSelect(new_selection) {
     };
 };
 
-function updateProjectSelect(new_selection) {
-    console.log(`in updateProjectSelect with ${new_selection}`);
+function updateProjectSelect(new_selection, detail_div) {
+    // project_title = project_title.slice(project_title.indexOf(". ") + 1);
+    // console.log(`in updateProjectSelect new_selection is ${new_selection} detail div is ${detail_div} and project_title is '${project_title}'`);
+    // console.log(project_title);
+    // console.log(`at load nav project select was ${nav_project_select_group}`)
     if (new_selection === null) {
         nav_project_select = 'overview';
         nav_project_select_group = null;
-    } else if (new_selection === nav_project_select) {
+    } else if (nav_project_select === detail_div) {
         nav_project_select = 'overview';
         nav_project_select_group = null;
     } else {
-        nav_project_select = new_selection;
+        nav_project_select = detail_div;
         nav_project_select_group = new_selection.slice(new_selection.indexOf('-') +1);
         console.log(`nav_project_select is ${nav_project_select} and nav_project_select_group is ${nav_project_select_group}`);
     };
+    console.log(`in updateProjectSelect new_selection is ${new_selection} detail div is ${detail_div}`);
 }
 
 /*
@@ -92,14 +96,31 @@ function getToggleClassElements(group_name) {
         "group": group_name};
 }
 
+function getToggleProjectClassElements(project_name, project_title){
+    if (project_name === null) {
+        console.log("in get {title: none}")
+        return {"title": ""}
+    }
+    console.log(`in getToggleProjectClassElements project name is ${project_name} and project_title is ${project_title}`);
+    var project_elements = getToggleClassElements(`${project_name}-project`);
+    project_elements["mobile"] = document.getElementById(`${project_name}-mobile-title`);
+    project_elements["preview"] = document.getElementById(`${project_name}-preview`);
+    project_elements["title"] = project_title;
+    project_elements["group"] = "project";
+    return project_elements;
+}
+
 function toggleHidden(elements, hidden_class_name) {
+    console.log(elements);
     if (hidden_class_name === undefined) {
         hidden_class_name = `${elements.group}-container--hidden`;
     };
     for (let element of Object.keys(elements)) {
+        console.log(`"toggleHidden" with ${hidden_class_name} on ${element}`);
         const div = elements[element];
-        console.log(`"toggleHidden" with ${hidden_class_name}`);
-        if (div.classList) {
+        console.log(div);
+        if (div && div.classList) {
+            console.log(`contains?? ${div.classList.contains(hidden_class_name) === true}`)
             if (div.classList.contains(hidden_class_name) === true) {
                 div.classList.remove(hidden_class_name);
             } else {
@@ -111,22 +132,19 @@ function toggleHidden(elements, hidden_class_name) {
 
 function toggleDisplayGroup() {
     id = nav_select_group;
-    let displayed_group = getToggleClassElements();
     updateNavGroupDisplay();
 };
 
 // 
 
 function toggleProjectVisibilty(e) {
-    const title_div = e.target;
+    const project_title = e.target.outerText.replace("\n", "").replace("Name.", "");
     const parent_div = e.target.parentElement.offsetParent;
     const project_button = parent_div.getElementsByClassName('project-detail')[0];
-    console.log(title_div);
-    console.log(project_button);
-    console.log(parent_div);
-    const project_title = parent_div.getAttribute('aria-controls');
-    console.log(`project button is ${project_button} with ${project_title}`);
-    updateProjectSelect(project_title);
+    const project_var_id = parent_div.getAttribute('aria-controls');
+    toggleHidden(getToggleProjectClassElements(nav_project_select_group, project_title), 'project-detail--hidden');
+    updateProjectSelect(project_var_id, project_button);
+    toggleHidden(getToggleProjectClassElements(nav_project_select_group, project_title), 'project-detail--hidden');
 }
 
 /*
