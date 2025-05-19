@@ -1,5 +1,3 @@
-![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=hello%20everybody&fontAlign=40&fontAlignY=40&fontColor=ffffff&color=0:1f7a7a,4:008080,19:009999,65:3380cc,92:b53389,100:9d0759)
-
 I'm so glad you took a moment to check out my github profile. My personal projects are available here. My personal website is currently under construction.
 
 Some of my favorite things to work with are databases, workflow automation, spreadsheets, and data scraping/cleaning. Most of my motivation is to understand data organization and present it in a simple and understandable way. I like MySQL, PostgreSQL, and sqlite. I love elegant solutions, savor minimalist and intuitive design, appreciate good documentation, notice details, prioritize pragmatic decisions and conversations and work well independently and on teams.
